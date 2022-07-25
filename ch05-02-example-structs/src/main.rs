@@ -1,9 +1,16 @@
 
+#[derive(Debug)]
 struct Rectangle {
     width: u32,
     height: u32,
 }
 
+
+impl Rectangle {
+    fn area(&self) -> u32  {
+        self.width * self.height
+    } 
+}
 
 
 fn main() {
@@ -13,11 +20,9 @@ fn main() {
         height: 5,
     };
 
-    println!("The area of the rectangle is {}", area(rect));
+    println!("The Rectangle rect = {:?}", rect);
+    println!("The area of the rectangle is {}", rect.area());
 
 }
 
 
-fn area(rec : Rectangle) -> u32  {
-    rec.width * rec.height
-}
